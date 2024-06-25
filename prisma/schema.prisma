@@ -19,6 +19,7 @@ model User {
   email    String  @unique
   password String
   address  String
+  role     String  @default("user") // Adding a role field for authorization
   orders   Order[]
   cart     Cart?
 }
